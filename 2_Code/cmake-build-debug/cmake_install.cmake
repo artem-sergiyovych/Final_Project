@@ -1,4 +1,4 @@
-# Install script for directory: /Users/artemtymoshchuk/Documents/Study PUT/programming/My_project/2_Code
+# Install script for directory: /Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/artemtymoshchuk/Documents/Study PUT/programming/My_project/2_Code/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

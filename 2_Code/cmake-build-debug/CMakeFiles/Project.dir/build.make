@@ -53,10 +53,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/artemtymoshchuk/Documents/Study PUT/programming/My_project/2_Code"
+CMAKE_SOURCE_DIR = "/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/artemtymoshchuk/Documents/Study PUT/programming/My_project/2_Code/cmake-build-debug"
+CMAKE_BINARY_DIR = "/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Project.dir/depend.make
@@ -68,25 +68,40 @@ include CMakeFiles/Project.dir/flags.make
 
 CMakeFiles/Project.dir/main.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/artemtymoshchuk/Documents/Study PUT/programming/My_project/2_Code/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Project.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/main.cpp.o -c "/Users/artemtymoshchuk/Documents/Study PUT/programming/My_project/2_Code/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Project.dir/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/main.cpp.o -c "/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/main.cpp"
 
 CMakeFiles/Project.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/artemtymoshchuk/Documents/Study PUT/programming/My_project/2_Code/main.cpp" > CMakeFiles/Project.dir/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/main.cpp" > CMakeFiles/Project.dir/main.cpp.i
 
 CMakeFiles/Project.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/artemtymoshchuk/Documents/Study PUT/programming/My_project/2_Code/main.cpp" -o CMakeFiles/Project.dir/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/main.cpp" -o CMakeFiles/Project.dir/main.cpp.s
+
+CMakeFiles/Project.dir/sprite.cpp.o: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/sprite.cpp.o: ../sprite.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Project.dir/sprite.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/sprite.cpp.o -c "/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/sprite.cpp"
+
+CMakeFiles/Project.dir/sprite.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/sprite.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/sprite.cpp" > CMakeFiles/Project.dir/sprite.cpp.i
+
+CMakeFiles/Project.dir/sprite.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/sprite.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/sprite.cpp" -o CMakeFiles/Project.dir/sprite.cpp.s
 
 # Object files for target Project
 Project_OBJECTS = \
-"CMakeFiles/Project.dir/main.cpp.o"
+"CMakeFiles/Project.dir/main.cpp.o" \
+"CMakeFiles/Project.dir/sprite.cpp.o"
 
 # External object files for target Project
 Project_EXTERNAL_OBJECTS =
 
 Project: CMakeFiles/Project.dir/main.cpp.o
+Project: CMakeFiles/Project.dir/sprite.cpp.o
 Project: CMakeFiles/Project.dir/build.make
 Project: /opt/homebrew/lib/libsfml-graphics.2.5.1.dylib
 Project: /opt/homebrew/lib/libsfml-audio.2.5.1.dylib
@@ -94,7 +109,7 @@ Project: /opt/homebrew/lib/libsfml-network.2.5.1.dylib
 Project: /opt/homebrew/lib/libsfml-window.2.5.1.dylib
 Project: /opt/homebrew/lib/libsfml-system.2.5.1.dylib
 Project: CMakeFiles/Project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/artemtymoshchuk/Documents/Study PUT/programming/My_project/2_Code/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Project"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Project"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Project.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -106,6 +121,6 @@ CMakeFiles/Project.dir/clean:
 .PHONY : CMakeFiles/Project.dir/clean
 
 CMakeFiles/Project.dir/depend:
-	cd "/Users/artemtymoshchuk/Documents/Study PUT/programming/My_project/2_Code/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/artemtymoshchuk/Documents/Study PUT/programming/My_project/2_Code" "/Users/artemtymoshchuk/Documents/Study PUT/programming/My_project/2_Code" "/Users/artemtymoshchuk/Documents/Study PUT/programming/My_project/2_Code/cmake-build-debug" "/Users/artemtymoshchuk/Documents/Study PUT/programming/My_project/2_Code/cmake-build-debug" "/Users/artemtymoshchuk/Documents/Study PUT/programming/My_project/2_Code/cmake-build-debug/CMakeFiles/Project.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code" "/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code" "/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/cmake-build-debug" "/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/cmake-build-debug" "/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/cmake-build-debug/CMakeFiles/Project.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/Project.dir/depend
 

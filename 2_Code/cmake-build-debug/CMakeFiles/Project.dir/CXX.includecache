@@ -6,10 +6,18 @@
 
 #IncludeRegexTransform: 
 
-/Users/artemtymoshchuk/Documents/Study PUT/programming/My_project/2_Code/main.cpp
+/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/main.cpp
 iostream
 -
 SFML/Graphics.hpp
+-
+sprite.hpp
+/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/sprite.hpp
+
+/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/sprite.hpp
+SFML/Graphics.hpp
+-
+string
 -
 
 /opt/homebrew/include/SFML/Config.hpp

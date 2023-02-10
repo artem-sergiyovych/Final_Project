@@ -57,10 +57,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/artemtymoshchuk/Documents/Study PUT/programming/My_project/2_Code"
+CMAKE_SOURCE_DIR = "/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/artemtymoshchuk/Documents/Study PUT/programming/My_project/2_Code/cmake-build-debug"
+CMAKE_BINARY_DIR = "/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/artemtymoshchuk/Documents/Study PUT/programming/My_project/2_Code/cmake-build-debug/CMakeFiles" "/Users/artemtymoshchuk/Documents/Study PUT/programming/My_project/2_Code/cmake-build-debug//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/cmake-build-debug/CMakeFiles" "/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/cmake-build-debug//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/artemtymoshchuk/Documents/Study PUT/programming/My_project/2_Code/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -153,6 +153,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+sprite.o: sprite.cpp.o
+.PHONY : sprite.o
+
+# target to build an object file
+sprite.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/sprite.cpp.o
+.PHONY : sprite.cpp.o
+
+sprite.i: sprite.cpp.i
+.PHONY : sprite.i
+
+# target to preprocess a source file
+sprite.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/sprite.cpp.i
+.PHONY : sprite.cpp.i
+
+sprite.s: sprite.cpp.s
+.PHONY : sprite.s
+
+# target to generate assembly for a file
+sprite.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/sprite.cpp.s
+.PHONY : sprite.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,6 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... sprite.o"
+	@echo "... sprite.i"
+	@echo "... sprite.s"
 .PHONY : help
 
 
