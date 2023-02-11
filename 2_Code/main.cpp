@@ -47,7 +47,7 @@ int main() {
         }
         // Display the window
         window.clear();
-        //window.draw(sprite_back);
+        window.draw(sprite_back);
         window.draw(sprite_startb);
         window.display();
     }
