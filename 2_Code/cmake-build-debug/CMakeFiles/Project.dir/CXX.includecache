@@ -6,13 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/main.cpp
-iostream
--
-SFML/Graphics.hpp
--
+/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/sprite.cpp
 sprite.hpp
 /Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/sprite.hpp
+iostream
+-
 
 /Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/sprite.hpp
 SFML/Graphics.hpp
