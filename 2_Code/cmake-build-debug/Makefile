@@ -129,6 +129,30 @@ Project/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/build
 .PHONY : Project/fast
 
+collision.o: collision.cpp.o
+.PHONY : collision.o
+
+# target to build an object file
+collision.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/collision.cpp.o
+.PHONY : collision.cpp.o
+
+collision.i: collision.cpp.i
+.PHONY : collision.i
+
+# target to preprocess a source file
+collision.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/collision.cpp.i
+.PHONY : collision.cpp.i
+
+collision.s: collision.cpp.s
+.PHONY : collision.s
+
+# target to generate assembly for a file
+collision.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/collision.cpp.s
+.PHONY : collision.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -186,6 +210,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Project"
+	@echo "... collision.o"
+	@echo "... collision.i"
+	@echo "... collision.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

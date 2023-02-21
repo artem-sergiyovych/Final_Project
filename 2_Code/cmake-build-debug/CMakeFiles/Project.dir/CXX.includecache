@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/Collision.hpp
+
 /Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/main.cpp
 iostream
 -
@@ -13,6 +15,8 @@ SFML/Graphics.hpp
 -
 sprite.hpp
 /Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/sprite.hpp
+Collision.hpp
+/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/Collision.hpp
 
 /Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/sprite.hpp
 SFML/Graphics.hpp

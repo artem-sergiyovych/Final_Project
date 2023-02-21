@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/collision.cpp">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/collision.h">
+			<Option target="Project"/>
+		</Unit>
 		<Unit filename="/Users/artemtymoshchuk/Documents/Study PUT/programming/GIT_Project/2_Code/main.cpp">
 			<Option target="Project"/>
 		</Unit>

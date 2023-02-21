@@ -1,25 +1,31 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "sprite.hpp"
+#include "Collision.hpp"
 
 
 int main() {
     //Create a window
-    sf::RenderWindow window(sf::VideoMode(2800, 1600), "Pinball");
+    sf::RenderWindow window(sf::VideoMode(3000, 1800), "Pinball");
     // Limit the framerate
     sf::Clock clock;
     window.setFramerateLimit(60);
     /////////////////////////////~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SPRITES~~~~~
     Sprite sprite_back_object("Images/background.png",{0,0});
     sf::Sprite & sprite_back = sprite_back_object.getSprite();
-    sprite_back.setScale(6,3.5);
+    sprite_back.setScale(7,7);
 
-    sf::RectangleShape board(sf::Vector2f (1100,1500));
+    sf::RectangleShape board(sf::Vector2f (1100,1750));
     board.setFillColor(sf::Color(0,100,80,155));
-    board.setPosition(700,50);
+    board.setPosition(700,0);
 
     Sprite sprite_startb_object("Images/start_button.png",{1900,500});
     sf::Sprite & sprite_startb = sprite_startb_object.getSprite();
+    ///borders of start button
+    float sprite_startbLeft = sprite_startb.getPosition().x;
+    float sprite_startbRight = sprite_startbLeft + sprite_startb.getGlobalBounds().width;
+    float sprite_startbTop = sprite_startb.getPosition().y;
+    float sprite_startbBottom = sprite_startbTop + sprite_startb.getGlobalBounds().height;
     //Elbows
     Sprite sprite_lelbow_object ("Images/l_elbow.png", {1050,840});
     sf::Sprite sprite_lelbow = sprite_lelbow_object.getSprite();
@@ -79,7 +85,7 @@ int main() {
     sf::RectangleShape leftBorder;
     leftBorder.setSize({30,680});leftBorder.setPosition(880, 530);leftBorder.setFillColor({113,122,124});
     sf::RectangleShape rightBorder;
-    rightBorder.setSize({30,920});rightBorder.setPosition(1490, 630);rightBorder.setFillColor({113,122,124});
+    rightBorder.setSize({30,1120});rightBorder.setPosition(1490, 630);rightBorder.setFillColor({113,122,124});
     sf::RectangleShape lbBorder;
     lbBorder.setSize({30,415});lbBorder.setPosition(880,1210);
     lbBorder.setFillColor({113,122,124});lbBorder.setRotation(-50);
@@ -100,9 +106,22 @@ int main() {
     sf::RectangleShape tunnelline5;
     tunnelline5.setSize({35,5});tunnelline5.setPosition(1520,704);tunnelline5.setFillColor({113,122,124});
     sf::RectangleShape rightwall;
-    rightwall.setSize({30,1020});rightwall.setPosition(1555, 530);rightwall.setFillColor({113,122,124});
+    rightwall.setSize({30,1220});rightwall.setPosition(1555, 530);rightwall.setFillColor({113,122,124});
+    //Ram   (starter)
+    Sprite sprite_ram_object ("Images/ram.png", {1523,1204});
+    sf::Sprite & sprite_ram = sprite_ram_object.getSprite();
+    sprite_ram.setScale(0.1,0.5);
+    // Define initial position and velocity
+    sf::Vector2f ram_position(sprite_ram.getPosition());
+    sf::Vector2f ram_velocity(0, 1); // pixels per second
+    sf::Vector2f ram_acceleration(0, 2); // pixels per second squared
+    // Define animation variables
+    float time;
+    float maxDistance = 500;
+    bool isAnimating = false;
 
-//530       630
+
+
     /////////////////////////////~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SPRITES~End~
 
     while (window.isOpen()) {
@@ -120,11 +139,36 @@ int main() {
                 std::cout << "Handling event is closed";
                 exit(EXIT_SUCCESS);
             }
+            ///Main piece of game code
+            else if (event.type == sf::Event::MouseButtonPressed && event.mouseButton.button == sf::Mouse::Left)
+            {
+                // Check if the left mouse button is pressed within the borders of the sprite
+                if (sf::Mouse::getPosition(window).x >= sprite_startbLeft &&
+                    sf::Mouse::getPosition(window).x <= sprite_startbRight &&
+                    sf::Mouse::getPosition(window).y >= sprite_startbTop &&
+                    sf::Mouse::getPosition(window).y <= sprite_startbBottom &&!isAnimating)
+                {
+                    while(!isAnimating) {
+                        // Update time
+                        time += 1.0 / fps; // assume 60 fps
 
+                        // Update velocity and position
+                        ram_velocity += ram_acceleration * time;
+                        ram_position += ram_velocity * time; // assume 60 fps
+                        sprite_ram.setPosition(ram_position);
+                        // Check if animation should stop
+                        if (ram_position.y >= 1204 + maxDistance) {
+                            ram_position.y = 1204 + maxDistance;
+                            isAnimating = false;
+                        }
+                    }
+                }
+            }
         }
 
         // Display the window
         window.clear();
+
 
         sprite_lleg.rotate(1.0);
         sprite_rleg.rotate(-1.0);
@@ -161,6 +205,7 @@ int main() {
         window.draw(tunnelline3);
         window.draw(tunnelline4);
         window.draw(tunnelline5);
+        window.draw(sprite_ram);
         window.display();
     }
 }
